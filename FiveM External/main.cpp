@@ -593,11 +593,11 @@ void Render() {
 					ImGui::Checkbox("Vehicle Acceleration", &ex_vehicleaceleration);
 					ImGui::Checkbox("Vehicle GodMode", &ex_vehiclegodmode);
 					ImGui::Checkbox("Fix Engine", &the_bool);
-					ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 1.0f, 1.0f));  // Set text color to white
+					ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 1.0f, 1.0f, 1.0f));
 					if (ImGui::Button("Fix Engine", ImVec2(192, 22))) {
 						Vehicle::FixEngine(1000.f);
 					}
-					ImGui::PopStyleColor();  // Revert text color back to default
+					ImGui::PopStyleColor(); 
 					ImGui::SliderFloat(XorStr("Vehicle Acceleration").c_str(), &ex_vehicleaceleration_value, 0.f, 20000.f, "% .2f");
 				}
 				ImGui::EndChild();
